@@ -1,9 +1,64 @@
 {% extends 'layout.html' %}
 
 {% block sidebar %}
-    sidebar content here
+<h5><a href="what.html">WHAT WE DO</a></h5>
+<ul>
+    <li class="sub-header"><a href="welcome.html">Subrogation</a></li>
+    <ul class="sub-list">
+        <li><a href="#">Property</a></li>
+        <li><a href="#">Workers'<br />Compensation</a></li>
+    </ul>
+    <li class="sub-header"><a href="attorneys.html">Litigation</a></li>
+    <ul class="sub-list">
+        <li><a href="#">Appellate</a></li>
+        <li><a href="#">Commercial</a></li>
+        <li><a href="#">Defense</a></li>
+        <li><a href="#">Labor/Employment</a></li>
+    </ul>
+    <li class="sub-header"><a href="staff.html">Business</a></li>
+    <ul class="sub-list">
+        <li><a href="#">Brokerage Agreement</a></li>
+        <li><a href="#">Business Formation</a></li>
+        <li><a href="#">Business Related Contracts</a></li>
+        <li><a href="#">Labor/Employment</a></li>
+    </ul>
+    <li class="sub-header-bottom"><a href="staff.html">Transportation</a></li>
+</ul>
+<a href="where.html">
+    <figure>
+        <img style="width:100%; max-width:200px" src="{{ url_for('static', filename='images/content-navlink-attorneys.jpg') }}" alt="Map" />
+        <figcaption>
+            <h6>Attorneys</h6>
+            <p>Meet our prestigious partners and esteemed associates.</p>
+        </figcaption>
+    </figure>
+</a>
 {% endblock %}
 
 {% block content %}
-    main content here
+<div class="row">
+    <div class="col-md-12">
+        <p>What we do at Nielsen Zehe & Antas PC is prevent our client’s problems in some cases, solve their problems in
+            other cases, and ultimately, if the problems cannot be prevented or solved, prepare to take the problems to
+            trial and WIN. Our attorneys, who view themselves as problem solvers, have tried more cases to a jury or
+            judge than most law firms collectively. Whether the problem is a lawsuit, business deal, or formation of a
+            new business, we have the skill, experience, and business acumen to help our clients.</p>
+    </div> <!-- End p -->
+</div> <!-- End row 1 -->
+<div class="row">
+    <div class="col-md-6">
+        <a href="welcome.html"><img src="{{ url_for('static', filename='images/sub-02-subrogation.jpg') }}" alt="Image" /></a>
+    </div>
+    <div class="col-md-6">
+        <a href="attorneys.html"><img src="{{ url_for('static', filename='images/sub-02-litigation.jpg') }}" alt="Image" /></a>
+    </div> <!-- End 2 columns of images -->
+</div> <!-- End row 2 -->
+<div class="row">
+    <div class="col-md-6">
+        <a href="staff.html"><img src="{{ url_for('static', filename='images/sub-02-business.jpg') }}" alt="Image" /></a>
+    </div>
+    <div class="col-md-6">
+        <a href="reputation.html"><img src="{{ url_for('static', filename='images/sub-02-warehouse.jpg') }}" alt="Image" /></a>
+    </div> <!-- End 2 columns of images -->
+</div> <!-- End row 3 -->
 {% endblock %}

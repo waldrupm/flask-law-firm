@@ -1,9 +1,73 @@
 {% extends 'layout.html' %}
 
 {% block sidebar %}
-    sidebar content here
+<h5><a href="whoweare.html">WHERE WE WORK</a></h5>
+<ul>
+    <li><a href="#">United States</a></li>
+    <li><a href="#">International</a></li>
+</ul>
+<a href="where.html">
+    <figure>
+        <img style="width:100%; max-width:200px" src="{{ url_for('static', filename='images/content-navlink-career.jpg') }}" alt="Map" />
+        <figcaption>
+            <h6>Career Opportunities</h6>
+            <p>Join our magnificent firm.</p>
+        </figcaption>
+    </figure>
+</a>
 {% endblock %}
 
 {% block content %}
-    main content here
+<div class="row">
+    <div class="col-md-12">
+        <p>Nielsen, Zehe, Antas attorneys practice where our clients need us. And, we are proud to say our clients have
+            needed us everywhere – we have practiced in forty-eight states across the United States and in four
+            different countries. Currently, we are admitted in state and federal courts across the country, either as a
+            member of the bar of that state or via pro hoc vice admission. Please see below for more information on
+            where the firm has practiced:</p>
+    </div> <!-- End p -->
+</div> <!-- End row 1 -->
+<div class="row">
+    <div class="col-md-8">
+        <h4>United States</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <p class="listed-places">
+                    Alabama<br />Alaska<br />Arizona<br />
+                    Arkansas<br />California<br />Colorado<br />
+                    Connecticut<br />Florida<br />Georgia<br />
+                    Hawaii<br />Idaho<br />Illinois<br />Indiana<br />
+                    Iowa<br />Kansas<br />Kentucky<br />Louisiana</p>
+            </div>
+            <div class="col-md-4">
+                <p class="listed-places">
+                    Maine<br />Maryland<br />Massachusetts<br />
+                    Michigan<br />Minnesota<br />Mississippi<br />
+                    Missouri<br />Montana<br />Nebraska<br />
+                    Nevada<br />New Hampshire<br />New Jersey<br />
+                    New Mexico<br />New York<br />North Carolina<br />North Dakota<br />Ohio</p>
+            </div>
+            <div class="col-md-4">
+                <p class="listed-places">
+                    Oklahoma<br />Oregon<br />Pennsylvania<br />
+                    South Carolina<br />South Dakota<br />
+                    Tennessee<br />Texas<br />Utah<br />Vermont<br />
+                    Virginia<br />Washington<br />West Virginia<br />
+                    Wisconsin<br />Wyoming</p>
+            </div>
+        </div>
+    </div> <!-- End US header and content -->
+    <div class="col-md-4">
+        <h4>International</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="listed-places">
+                    Canada<br />Columbia<br />Germany<br />
+                    Nicarauga</p>
+            </div>
+        </div>
+    </div> <!-- End International header -->
+</div> <!-- End header row -->
+<div class="row">
+</div>
 {% endblock %}

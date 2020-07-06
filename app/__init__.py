@@ -11,12 +11,12 @@ login_manager = LoginManager()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
-    app.config.from_object(config_class) # TODO Edit config class for Postgres when ready.
+    app.config.from_object(config_class)  # TODO Edit config class for Postgres when ready.
 
     db.init_app(app)
     migrate.init_app(app)
 
-    # login_manager.init_app(app) 
+    # login_manager.init_app(app)
     # TODO configure login_view and login_message_category when users setup.
 
     # with app.app_context():
