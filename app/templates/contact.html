@@ -1,9 +1,63 @@
 {% extends 'layout.html' %}
 
 {% block sidebar %}
-    sidebar content here
+<h5><a href="{{ url_for('main.contact') }}">CONTACT US</a></h5>
+<ul>
+    <li><a href="#">Directions/Parking</a></li>
+    <li><a href="#">Career Opportunities</a></li>
+</ul>
+<a href="{{ url_for('main.where') }}">
+    <figure>
+        <img style="width:100%; max-width:200px" src="{{ url_for('static', filename='images/content-navlink-news.jpg') }}" alt="Map" />
+        <figcaption>
+            <h6>News & Events</h6>
+            <p>Read the most current information about our firm.</p>
+        </figcaption>
+    </figure>
+</a>
 {% endblock %}
 
 {% block content %}
-    main content here
+<div class="row">
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="{{ url_for('static', filename='images/content-05-contact.jpg') }}" alt="Image" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="inner-content">The office hours are 8am – 5pm Monday through Friday<br /><br />
+                    55 West Monroe Street<br />
+                    Suite 1800<br />
+                    Chicago, Illinois 60603<br /><br />
+                    PH: 312.322.9900<br />
+                    FAX: 312.322.9977<br /><br />
+                    Contact: Rosemary Panek at <a href="mailto:me@me.com">rpanek@nzalaw.com</a></p>
+            </div>
+        </div>
+    </div> <!-- End middle content -->
+    <div class="col-md-4">
+        <div class="right-side-nav">
+            <a href="{{ url_for('main.where') }}">
+                <figure class="right-bar-margin">
+                    <img style="width:100%; max-width:200px" src="{{ url_for('static', filename='images/content-link-where.jpg') }}" alt="Map" />
+                    <figcaption>
+                        <h6>Where We Work</h6>
+                        <p>Find out more about our work coverage area.</p>
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="{{ url_for('main.where') }}">
+                <figure class="right-bar-margin extra-top-padding">
+                    <img style="width:100%; max-width:200px" src="{{ url_for('static', filename='images/content-link-reputation.jpg') }}" alt="Map" />
+                    <figcaption>
+                        <h6>Reputation</h6>
+                        <p>Read about our admirable reputation.</p>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </div> <!-- End side-bar-nav on right -->
+</div> <!-- End header row -->
 {% endblock %}

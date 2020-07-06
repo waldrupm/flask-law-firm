@@ -28,7 +28,7 @@ def news():
 def where():
     return render_template('where.html')
 
-# TODO working on contact template, add email functionality
+
 @main.route("/contact")
 def contact():
     return render_template('contact.html')

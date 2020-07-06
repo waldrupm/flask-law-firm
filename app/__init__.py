@@ -16,7 +16,7 @@ def create_app(config_class=Config):
     db.init_app(app)
     migrate.init_app(app)
 
-    # login_manager.init_app(app)
+    login_manager.init_app(app)
     # TODO configure login_view and login_message_category when users setup.
 
     # with app.app_context():
