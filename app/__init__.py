@@ -20,7 +20,7 @@ def create_app(config_class=Config):
     # TODO configure login_view and login_message_category when users setup.
 
     # with app.app_context():
-        # from app import routes
+    #     from app import routes
 
     from app.blueprints.main.routes import main
     app.register_blueprint(main)

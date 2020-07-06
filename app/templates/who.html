@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block sidebar %}
+<h5><a href="{{ url_for('main.who') }}">WHO WE ARE</a></h5>
+<ul>
+    <li><a href="welcome.html">Welcome</a></li>
+    <li><a href="attorneys.html">Attorneys</a></li>
+    <li><a href="staff.html">Staff</a></li>
+    <li><a href="reputation.html">Reputation</a></li>
+    <li><a href="history.html">History</a></li>
+</ul>
+<a href="where.html">
+    <figure>
+        <img style="width:100%; max-width:200px" src="{{ url_for('static', filename='images/content-navlink-where.jpg') }}" alt="Map" />
+        <figcaption>
+            <h6>Where We Work</h6>
+            <p>Find out more about our work coverage area.</p>
+        </figcaption>
+    </figure>
+</a>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <p>Who we are? That is one of the most important questions a prospective client can ask us. Our answer – one of
+            the most respected law firms in the country that cares about your case, your business, and solving your
+            problem. We invite you to get to know our attorneys better and understand the depth of experience and talent
+            we have in the links below.</p>
+    </div> <!-- End p -->
+</div> <!-- End row 1 -->
+<div class="row">
+    <div class="col-md-6">
+        <a href="welcome.html"><img src="{{ url_for('static', filename='images/sub-01-welcome.jpg') }}" alt="Image" /></a>
+    </div>
+    <div class="col-md-6">
+        <a href="attorneys.html"><img src="{{ url_for('static', filename='images/sub-01-attorneys.jpg') }}" alt="Image" /></a>
+    </div> <!-- End 2 columns of images -->
+</div> <!-- End row 2 -->
+<div class="row">
+    <div class="col-md-6">
+        <a href="staff.html"><img src="{{ url_for('static', filename='images/sub-01-staff.jpg') }}" alt="Image" /></a>
+    </div>
+    <div class="col-md-6">
+        <a href="reputation.html"><img src="{{ url_for('static', filename='images/sub-01-reputation.jpg') }}" alt="Image" /></a>
+    </div> <!-- End 2 columns of images -->
+</div> <!-- End row 3 -->
+<div class="row">
+    <div class="col-md-6">
+        <a href="history.html"><img src="{{ url_for('static', filename='images/sub-01-history.jpg') }}" alt="Image" /></a>
+    </div> <!-- End 1 column of images -->
+</div>
+{% endblock %}
