@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Law</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row">
+        <div class="col-md-12">
+          <header>
+            {% include './partials/nav.html' %}
+          </header>
+        </div>
+      </div> <!-- End header row -->
+
+      <!-- Start main content -->
+      <div class="row">
+        <div class="md-col-12">
+          <main>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="small-side-bar">
+                  {% block sidebar %}{% endblock %}
+                </div> <!-- End side bar div -->
+              </div> <!-- End side bar columns -->
+              <div class="col-md-9">
+                {% block content %}{% endblock %}
+              </div> <!-- End columns for content col-9 -->
+            </div> <!-- End row for main content -->
+          </main>
+          <footer class="add-margin-top">
+            {% include './partials/footer.html' %}
+          </footer>
+        </div>
+      </div> <!-- End section row -->
+    </div> <!-- End wrapper -->
+  </body>
+</html>

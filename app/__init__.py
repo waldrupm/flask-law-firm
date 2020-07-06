@@ -22,7 +22,7 @@ def create_app(config_class=Config):
     # with app.app_context():
         # from app import routes
 
-    from app.main.routes import main
+    from app.blueprints.main.routes import main
     app.register_blueprint(main)
 
     return app
