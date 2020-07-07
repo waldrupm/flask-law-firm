@@ -14,16 +14,20 @@ def create_app(config_class=Config):
     app.config.from_object(config_class)  # TODO Edit config class for Postgres when ready.
 
     db.init_app(app)
-    migrate.init_app(app)
+    migrate.init_app(app, db)
 
     login_manager.init_app(app)
-    # TODO configure login_view and login_message_category when users setup.
+    login_manager.login_view = 'account.login'
+    login_manager.login_message_category = 'warning'
 
     # with app.app_context():
     #     from app import routes
 
     from app.blueprints.main.routes import main
     app.register_blueprint(main)
+
+    from app.blueprints.account.routes import account
+    app.register_blueprint(account)
 
     return app
 

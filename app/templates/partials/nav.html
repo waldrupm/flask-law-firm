@@ -1,5 +1,14 @@
-<a href="default.asp" class="login">LOGIN | REGISTER</a>
-    <br>
+{% if not current_user.is_authenticated %}
+    <div class="login">
+        <a href="{{ url_for('account.login') }}">LOGIN</a> | <a href="{{ url_for('account.register') }}">REGISTER</a>
+            <br>
+    </div>
+{% else %}
+    <div class="login">
+        <a href="{{ url_for('account.logout') }}">Logout, {{ current_user.email }}</a>
+            <br>
+    </div>
+{% endif %}
 <a href="{{url_for('main.home') }}"><img class="logo" src="http://placehold.it/318x76" alt="Logo" /></a>
 <nav>
     <ul>
