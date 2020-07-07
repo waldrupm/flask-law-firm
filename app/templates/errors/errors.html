@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %} {{ super() }} - Error {% endblock %}
+
+{% block sidebar %}
+    <h5><a href="{{ url_for('main.home') }}">Home</a></h5>
+{% endblock %}
+
+{% block content %}
+<h4>This is the error page</h4>
+<hr />
+<p>{{ error }}</p>
+
+{% endblock %}

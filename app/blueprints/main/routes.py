@@ -19,11 +19,6 @@ def what():
     return render_template('what.html')
 
 
-@main.route("/news")
-def news():
-    return render_template('news.html')
-
-
 @main.route("/where")
 def where():
     return render_template('where.html')

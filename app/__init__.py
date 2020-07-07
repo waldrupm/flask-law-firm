@@ -20,8 +20,8 @@ def create_app(config_class=Config):
     login_manager.login_view = 'account.login'
     login_manager.login_message_category = 'warning'
 
-    # with app.app_context():
-    #     from app import routes
+    with app.app_context():
+        from app import errors
 
     from app.blueprints.main.routes import main
     app.register_blueprint(main)

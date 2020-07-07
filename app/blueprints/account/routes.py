@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, url_for, redirect, flash
-from flask_login import login_user, logout_user
+from flask_login import login_user, logout_user, login_required
 from app.models import User
 from app import db
 
@@ -50,6 +50,7 @@ def register():
 
 
 @account.route('/logout', methods=["GET"])
+@login_required
 def logout():
     logout_user()
     flash("Logged out successfully", "info")
